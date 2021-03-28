@@ -1,0 +1,12 @@
+
+{
+  "name": "alicemarticavalle_3_20022021",
+  "version": "1.0.0",
+  "description": "projet 3 openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "author": "Alice",
+  "license": "ISC"
+}

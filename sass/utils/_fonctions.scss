@@ -1,0 +1,38 @@
+/*généraliser les délais pour menu loader*/
+
+
+
+// @if string.length($string) == 
+// @return $insert
+
+// @function textCoupe (e) { //e texte à couper
+//     @if (length(e) > 20px) { //si texte > 20px on met ... à la fin
+//         insert ...
+//     }
+// }
+// ensuite mettre le tout dans une mixin taille d'écran
+
+// $h3 : h3 ?
+
+// @function CoupeTexte (e) {
+//     @if (string.length(e) > 20px) {
+//         @return string.insert(e, "...", $20);
+//     }
+// }
+
+
+
+// @function taille($string) {
+//     @if length($string) > 20 {
+//         @return 
+//     }
+// }
+
+// // string.insert($string, $insert, $index)
+// // return copy of $string avec $insert à $index
+// // si index > length de $string, $insert se met à la fin
+
+// // string.length($string)
+// // return nombre de caractères dans $string
+
+// // string.unique-id() retourne un id utilisable en css

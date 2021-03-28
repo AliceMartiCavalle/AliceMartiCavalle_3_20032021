@@ -1,0 +1,27 @@
+$color : (
+	primary : #9356DC,
+	secondary : #FF79DA,
+    tertiary : #99E2D0,
+    background : #F2F2F2,
+    clair : white,
+    sombre : black
+);
+
+$size : (
+    big : 2em,
+    medium : 1.5em,
+    small : 1.1em,
+);
+
+$breakpoints : (  /*mix-width*/
+    mobile : 576px,
+    tablet : 768px,
+    desktop : 992px
+);
+
+/*
+$font : (
+    titre : 'shrikhand',
+    texte : 'roboto'
+);
+*/
