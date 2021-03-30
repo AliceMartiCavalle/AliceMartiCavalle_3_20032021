@@ -1,5 +1,9 @@
 Projet 3
 
+Note post mentorat 30/03
+- On ne peut pas mettre les defs du svg en display none sinon le dégradé ne s'applique plus
+- 5 erreurs liées aux svg quand on passe le code au validateur CSS
+
 Polices
 Logo et titres: Shrikhand
 Texte: Roboto
@@ -36,6 +40,3 @@ icones :
 <i class="fas fa-hands-helping"></i> partnership
 <i class="fas fa-check-circle"></i> checkbox
 
-Note post mentorat 30/03
-- On ne peut pas mettre les defs du svg en display none sinon le dégradé ne s'applique plus
-- 5 erreurs liées aux svg quand on passe le code au validateur CSS
