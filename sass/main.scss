@@ -483,7 +483,7 @@ footer {
             width: 80%;  
             // transform: scaleX(2);  //* déforme le texte donc non
             // transform-origin: left;
-            transition: 0 1000ms;
+            transition: 0s 1000ms;
             > p {
                 margin: 0; //* and why not use reset css ? Because I fucking forgot, ok ? No I'm not talking to myself at all
             }
