@@ -12,6 +12,10 @@
 
 /*anim text-overflow ellipsis*/
 @keyframes shrink {
-    from {width:80%;}
-    to {width: 48%;}
-  }
+    from {
+        width:80%;
+    }
+    to {
+        width: 48%;
+    }
+}

@@ -121,10 +121,14 @@ header {
     width: 100%;
     background-color: map-get($color, background);
     > .ligne {
+        // border: 1px solid #000;
         justify-content: center;
         width: 100%;
         background-color: darken(map-get($color, background), 10%);
         box-shadow: inset 0px 10px 10px -10px darken(map-get($color, background), 50%);
+        > p {
+            font-family: map-get($weight, medium);
+        }
     }
     > .colonne {
         padding: 45px;
@@ -132,7 +136,8 @@ header {
             text-align: center;
             
         }
-        > p {                               /*border : 1px solid blue;*/
+        > p {                               
+            // border : 1px solid blue;
             text-align: center;
         }
     }
@@ -292,8 +297,7 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 0 25px; //? pourquoi le padding dépasse ?
-        width: 100%;
+        width: calc(100% - 25px);
     }
     &.footerMenu {
                                         // border: 1px solid orange;
@@ -322,6 +326,9 @@ footer {
         }
         > li:nth-child(2) a i {                    /*border: 1px solid blueviolet;*/
             font-size: 0.9em;
+        }
+        > li:nth-child(3) a, li:nth-child(4) a {
+            font-family: map-get($weight, thin), Arial, sans-serif;
         }
         > li a{
             color: map-get($color, clair);
@@ -375,6 +382,9 @@ footer {
         @include desktopOnly {
             justify-content: space-around;
         }
+        > h1 {
+            font-family: "Shrikhand", Arial, sans-serif;
+        }
     }
     > .sousMenu:nth-child(2) {
         grid-column: 1;
@@ -400,9 +410,17 @@ footer {
         align-items: start;
         grid-gap: 20px;
     }
+    .bouton {
+        padding: 15px 40px;
+    }
 }
-.sousMenu {                     /*border : 1px solid blue;*/
+.sousMenu {                     
+    // border : 1px solid blue;
     width: 100%;
+    margin-bottom: 20px;
+    > h2 {
+        font-family: map-get($weight, thin), Arial, sans-serif;
+    }
     > ul li {                   
                                             // border: 1px solid green;
         width: 95%; //?why
@@ -414,15 +432,15 @@ footer {
         position: relative; /* pour le stretch-link*/
         justify-content: space-between;
         overflow: hidden;
-        animation: fadein /*1.5s*/0s forwards; /*faire un @each*/
+        animation: fadein 1.5s forwards; /*faire un @each*/
         &:nth-child(2) {
-            animation: fadein /*1.5s 0.3s*/0s both;
+            animation: fadein 1.5s 0.3s both;
         }
         &:nth-child(3) { /*a vérifier*/
-            animation: fadein /*1.5s 0.6s*/0s both;
+            animation: fadein 1.5s 0.6s both;
         }
         &:nth-child(4) { /*a vérifier*/
-            animation: fadein /*1.5s 0.9s*/0s both;
+            animation: fadein 1.5s 0.9s both;
         }
         &:hover > .ligne {  /*p*/
             transform: translateX(-150%);

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href=".\css\style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 	<meta charset="utf-8">
 	<title>Accueil</title>
 </head>
@@ -15,7 +15,7 @@
 		</div>
 	</div>
 	<header class="colonne">
-		<img src=".\images\logo\ohmyfood@2x.svg" alt="logo">
+		<img src="./assets/images/logo/ohmyfood@2x.svg" alt="logo">
 	</header>
 	<section class="explorer colonne">
 		<div class="ligne">
@@ -58,7 +58,7 @@
 		<h2>Restaurants</h2>
 		<section class="box">
 			<span>Nouveau</span>	<!--position relative-->
-			<img src="images\restaurants\palettePetit.jpg" alt="">
+			<img src="assets/images/restaurants/palettePetit.jpg" alt="un plat du restaurant La palette du goût">
 			<div class="ligne">
 				<div class="colonne">
 					<a href="" class="stretch-link">
@@ -70,22 +70,6 @@
 		</section>
 				<div class="icon">
 					<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
-						<defs> <!--//Est-ce qu'il y a un endroit où mettre <defs> ? en haut de la page ça crée un espace chelou-->
-							<!--<linearGradient id="Gradient01" x1="0" x2="0" y1="0" y2="100%">-->
-							  <!--!anime le rose-->
-							  <!--<stop offset="30%" stop-color="#9356DC" />
-							  <stop offset="90%" stop-color="#FF79DA" />		  
-							  <animate attributeName="y2" dur="1s" from="100%" to="0%" repeatCount="indefinite" />-->
-							  <!--</linearGradient>-->
-							  <linearGradient id="Gradient01" x1="20%" y1="80%">
-								<stop offset="0%" stop-color="#9356DC">
-								  <animate attributeName="stop-color" values="#9356DC; #FF79DA; #9356DC" dur="2s" repeatCount="indefinite" />
-								</stop>
-								<stop offset="100%" stop-color="#FF79DA">
-								  <animate attributeName="stop-color" values="#FF79DA; #9356DC; #FF79DA" dur="2s" repeatCount="indefinite" />
-								</stop>
-							</linearGradient>
-						</defs>
 						<path fill="" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
 						</path>
 					</svg>
@@ -96,7 +80,7 @@
 				</div>
 		<section class="box">
 				<span>Nouveau</span>	<!--position relative-->
-				<img src="images\restaurants\notePetit.jpg" alt="">
+				<img src="assets/images/restaurants/notePetit.jpg" alt="Un plat du restaurant La note enchantée">
 				<div class="ligne">
 					<div class="colonne">
 						<a href="" class="stretch-link">
@@ -117,7 +101,7 @@
 					</svg>
 				</div>
 		<section class="box">
-			<img src="images\restaurants\francaisePetit.jpg" alt="">
+			<img src="assets/images/restaurants/francaisePetit.jpg" alt="un plat du restaurant A la française">
 			<div class="ligne">
 				<div class="colonne">
 					<a href="a_la_francaise.html" class="stretch-link">
@@ -138,7 +122,7 @@
 				</div>
 			</div>
 		<section class="box">
-			<img src="images\restaurants\délicePetit.jpg" alt="">
+			<img src="assets/images/restaurants/délicePetit.jpg" alt="un plat du restaurant Le délice des sens">
 			<div class="ligne">
 				<div class="colonne">
 						<a href="" class="stretch-link">
@@ -191,6 +175,18 @@
 			</li>
 		</ul>
 	</footer>
+    <svg id="none">
+        <defs>
+            <linearGradient id="Gradient01" x1="20%" y1="80%">
+                <stop offset="0%" stop-color="#9356DC">
+                <animate attributeName="stop-color" values="#9356DC; #FF79DA; #9356DC" dur="2s" repeatCount="indefinite" />
+                </stop>
+                <stop offset="100%" stop-color="#FF79DA">
+                <animate attributeName="stop-color" values="#FF79DA; #9356DC; #FF79DA" dur="2s" repeatCount="indefinite" />
+                </stop>
+            </linearGradient>
+        </defs>
+    </svg>
     <script src="https://kit.fontawesome.com/6fd9169ed4.js" crossorigin="anonymous"></script>
 	<!-- <div id="svg">
 		<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

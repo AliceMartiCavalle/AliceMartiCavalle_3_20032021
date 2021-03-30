@@ -1,21 +1,27 @@
-@font-face { /*cible pas le bon dossier*/
-    font-family: 'Roboto', sans-serif;
-    src: url('sass\font\Roboto-Thin.ttf'); /*nécessaire ? lien dans head html*/ 
+@font-face {
+    font-family: "Roboto-Thin"; /*si on rajoute une font au cas où, bug*/
+    src: url('../font/Roboto-Thin.ttf');
 }
 @font-face {
-    font-family: 'Shrikhand', cursive;
-    src: url('sass\font\Shrikhand-Regular.ttf');
+    font-family: "Roboto-Medium";
+    src: url('../font/Roboto-Medium.ttf');
 }
-* {                             /*border: 1px solid black;*/
-    font-family: 'Shrikhand' 'arial black'; /*fonctionne pas*/
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url('../font/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: "Shrikhand";
+    src: url('../font/Shrikhand-Regular.ttf');
 }
 body {                      
-                        // border: 1px solid orange;
-    
+                        // border: 1px solid orange;  
 }
 header, section, footer {       /*border: steelblue 1px solid;*/
-    
 
+}
+#none { //*masquer les defs svg en bas de page
+    display: none;
 }
 .ligne {                        /*border : 1px solid green;*/
     display: flex;
@@ -33,10 +39,23 @@ i {                                /*border : 1px solid;*/
 h1 {
     margin: 0;
     font-size: map-get($size, medium);
+    font-family: map-get($weight, bold), Arial, sans-serif;
 }
 h2 {
     margin: 0;
     font-size: map-get($size, medium);
+    font-family: map-get($weight, bold), Arial, sans-serif;
+}
+h3 {
+    margin: 0;
+    font-size: map-get($size, small);
+    font-family: map-get($weight, bold), Arial, sans-serif;
+}
+p {
+    font-family: map-get($weight, thin), Arial, sans-serif;
+}
+strong {
+    font-family: map-get($weight, medium), Arial, sans-serif;
 }
 .sousMenu h2 {                     
     text-transform: uppercase;
@@ -57,14 +76,10 @@ h2 {
         }
     
 }
-h3 {
-    margin: 0;
-    font-size: map-get($size, small);
-}
 a {                                         /*border: 1px solid springgreen;*/
     color: black;
     text-decoration: none;
-    }
+}
 .stretch-link::after {
     content: "";
     position: absolute;
@@ -136,10 +151,11 @@ ul, ol {
     justify-content: center;
     position: relative;
     z-index: 1;
+    font-family: map-get($weight, medium);
     color: map-get($color, clair);
     background: linear-gradient(-5deg, map-get($color, primary), 60%, map-get($color, secondary));
     border-radius: 100px;
-    padding: 10px 15px;
+    padding: 15px 20px;
     margin: 10px;
     @include shadow;
     transition: 300ms;

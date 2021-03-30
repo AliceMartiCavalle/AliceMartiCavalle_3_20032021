@@ -10,7 +10,13 @@ $color : (
 $size : (
     big : 2em,
     medium : 1.5em,
-    small : 1.1em,
+    small : 1.1em
+);
+
+$weight : (
+    thin : 'Roboto-Thin',
+    medium : 'Roboto-Medium',
+    bold : 'Roboto-Bold'
 );
 
 $breakpoints : (  /*mix-width*/
