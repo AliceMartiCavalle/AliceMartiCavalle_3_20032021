@@ -432,7 +432,7 @@ footer {
         position: relative; /* pour le stretch-link*/
         justify-content: space-between;
         overflow: hidden;
-        animation: fadein 1.5s forwards; /*faire un @each*/
+        animation: fadein 1.5s forwards;
         &:nth-child(2) {
             animation: fadein 1.5s 0.3s both;
         }

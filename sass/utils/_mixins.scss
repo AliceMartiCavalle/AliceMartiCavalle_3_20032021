@@ -8,7 +8,7 @@
         box-shadow: 0px 5px 10px 2px map-get($color, secondary);
     }
 }
-/*min max width ?*/
+
 @mixin mobileOnly {
     @media screen and (max-width: map-get($breakpoints, mobile)) {
         @content;
@@ -24,3 +24,19 @@
         @content;
     }
 }
+
+
+/*abandonné*/
+// $anim_name: fadein;
+// $anim_default-timing: 1.5s;
+// $anim_default-delay: 0s;
+// $anim_default-mode: both;
+
+// @mixin animated($name: $anim_name, $timing: $anim_default-timing, $delay : $anim_default-delay, $mode: $anim_default-mode) {
+//         animation: $name $timing $delay $mode;
+// }
+
+// @mixin animated_sousMenu($delay: $anim_default-delay, $mode: $anim_default-mode) {
+//     @include animated(fadein, 0.5s, $delay, $mode);
+// }
+

@@ -19,7 +19,7 @@ $font : (
 );
 */
 /*généraliser les délais pour menu loader*/
-/*min max width ?*/
+/*abandonné*/
 @font-face {
   font-family: "Roboto-Thin";
   /*si on rajoute une font au cas où, bug*/
@@ -590,8 +590,7 @@ footer {
     /* pour le stretch-link*/
     justify-content: space-between;
     overflow: hidden;
-    animation: fadein 1.5s forwards;
-    /*faire un @each*/ }
+    animation: fadein 1.5s forwards; }
     .sousMenu > ul li:hover {
       box-shadow: 0px 5px 10px 2px #595959; }
     .sousMenu > ul li:active {
