@@ -17,6 +17,9 @@
     }
     > .colonne {
         padding: 45px;
+        @include miniOnly {
+            padding: 45px 25px;
+        }
         > h1 {
             /*border : 1px solid;*/
             text-align: center;
@@ -52,6 +55,9 @@
         width: 80%; //*pour mettre des marges
         @include desktopOnly {
             width: 100%;
+        }
+        @include miniOnly {
+            width: 95%;
         }
         > li {
             /*border: 1px solid orange;*/
@@ -108,17 +114,17 @@
         margin-top: 50px;
     }
     > h2 {
-        // border: 1px solid #000;
+        // border: 1px solid rgb(83, 54, 54);
         align-self: flex-start;
-        padding: 10px 0;
+        padding: 0 0 0 20px;
         // margin: 20px;
         @include desktopOnly {
             // transform: translate(-10px, 25px) rotate(-40deg);
             // font-size: map-get($size, big);
             padding-left: 0;
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: 15px;
+            left: 15px;
         }
     }
     > .box {

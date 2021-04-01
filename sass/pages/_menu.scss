@@ -25,6 +25,9 @@
         }
         > h1 {
             font-family: "Shrikhand", Arial, sans-serif;
+            @include miniOnly {
+                font-size: map-get($size, medium);
+            }
         }
     }
     > .sousMenu:nth-child(2) {

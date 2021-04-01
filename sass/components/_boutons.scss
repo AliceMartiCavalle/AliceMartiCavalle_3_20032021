@@ -4,6 +4,9 @@
     position: relative;
     z-index: 1;
     font-family: map-get($weight, medium);
+    @include miniOnly {
+        font-size: .9em;
+    }
     color: map-get($color, clair);
     background: linear-gradient(-5deg, map-get($color, primary), 60%, map-get($color, secondary));
     border-radius: 100px;
