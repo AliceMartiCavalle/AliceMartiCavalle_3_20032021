@@ -1,0 +1,207 @@
+#imgMenu {
+    width: 100%; //? pourquoi ne prend pas toute la page ?
+    object-fit: cover;
+    max-height: 300px;
+}
+.menu {                                 
+                                        // border: 1px solid red;
+    position: relative;
+    top: -50px;
+    width: calc(100% - 20px);
+    // max-width: ;
+    padding: 30px 10px;
+    background-color: map-get($color, background);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    > .ligne {                          
+                                        // border: 1px solid blue;
+        width: 95%;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        grid-column: 2;
+        grid-row: 1;
+        @include desktopOnly {
+            justify-content: space-around;
+        }
+        > h1 {
+            font-family: "Shrikhand", Arial, sans-serif;
+        }
+    }
+    > .sousMenu:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    > .sousMenu:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    > .sousMenu:nth-child(4) {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    > .bouton:nth-child(5) {
+        grid-column: 2;
+        grid-row: 3;   
+        margin: 20px 0 50px 0; 
+    }
+    @include desktopOnly {
+        display: grid;
+        grid-template-rows: 50px 1fr 100px;
+		grid-template-columns: 1fr 1fr 1fr;
+        align-items: start;
+        grid-gap: 20px;
+    }
+    .bouton {
+        padding: 15px 40px;
+    }
+}
+.sousMenu {                     
+    // border : 1px solid blue;
+    width: 100%;
+    margin-bottom: 20px;
+    > h2 {
+        text-transform: uppercase;
+        /*box-shadow: 0 30px 0 -12px map-get($color, tertiary);*/
+        display: inline-block;
+        position: relative;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        font-size: map-get($size, small);
+        font-family: map-get($weight, thin), Arial, sans-serif;
+        &::after {                          /*outline: 5px solid;*/
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 45px;
+            border-bottom: map-get($color, tertiary) solid 3px;
+        }
+    }
+    > ul li {                   
+                                            // border: 1px solid green;
+        width: 95%; //?why
+        background-color: map-get($color, clair);
+        border-radius: 15px;
+        padding: 10px 0 10px 15px;
+        margin-bottom: 15px;
+        @include shadow;
+        position: relative; /* pour le stretch-link*/
+        justify-content: space-between;
+        overflow: hidden;
+        animation: fadein 1.5s forwards;
+        &:nth-child(2) {
+            animation: fadein 1.5s 0.3s both;
+        }
+        &:nth-child(3) { /*a vérifier*/
+            animation: fadein 1.5s 0.6s both;
+        }
+        &:nth-child(4) { /*a vérifier*/
+            animation: fadein 1.5s 0.9s both;
+        }
+        &:hover > .ligne {  /*p*/
+            transform: translateX(-150%);
+        }
+        &:hover > .ligne:nth-child(2) .colonne { /*...*/
+           opacity: 1;
+        }
+        &:hover > .ligne:nth-child(3) {   //checkbox      
+            transform: translateX(0);           
+        }
+        &:hover > .ligne:nth-child(3) > i { //i checkbox
+            transform: rotate(0);
+        }
+        &:hover > .colonne {
+            // width: 48%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            animation: shrink 1200ms forwards;
+            & h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            // border: 1px solid salmon;
+        }
+            & p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            // border: 1px solid salmon;
+            }
+        }
+        > .colonne {            
+                                    // border: 1px solid orange;
+            align-items: flex-start;
+            position: relative; /*pour placer animation par rapport à ici*/
+            z-index: -1; //* I forgot why -__-" loader anim ?
+            width: 80%;  
+            // transform: scaleX(2);  //* déforme le texte donc non
+            // transform-origin: left;
+            transition: 0s 1000ms;
+            > p {
+                margin: 0; //* and why not use reset css ? Because I fucking forgot, ok ? No I'm not talking to myself at all
+            }
+            
+        }
+        > .ligne {                          
+                                                    // border: 1px solid;
+            /*transform: translateX(150%);*/  
+            /*position: absolute;            
+            right: 0px;  */                 
+            transition: 700ms 150ms;  
+            transition-timing-function: cubic-bezier(.53,0,.61,1.05);  
+            width: 20%;
+            position: relative; //*pour que les "..." se cale par rapport à ça
+            > .colonne {            
+                                    // border: 1px solid pink;
+                display: none;
+                background-color: map-get($color, clair);
+                opacity: 1;        /*à régler pour tous les li*/  
+                position: absolute;            
+                right: 70%; 
+                padding-right: 30%;
+                width: 20%; 
+                transition: 150ms 650ms;  
+                @media screen and (min-width: 550px) and (max-width : 991px) { //!impossible à systhématiser
+                    // display: none;
+                    border: rgb(9, 211, 9) 1px solid;
+                    //? Est-ce que c'est possible de faire une fonction avec la taille du texte ?
+                    //? if txt.lenght > x px opacity 1 else 0 ?
+                }
+            }
+            > p {                   
+                                        // border: 1px solid blue;
+                padding: 20px 0px 0 10px;
+                margin: 0/*0 20px 0 16px*/;
+                background-color: map-get($color, clair);  
+                position: relative;            
+                right: 0px;
+                width: 100%;
+                text-align: left;
+                // transform: translateX(0%);              
+            }
+        }
+        > .ligne:nth-child(3) {     
+                                                // border: 1px solid #000;   
+            position: absolute; 
+            right: 0;                
+            width: 30%;
+            height: 62px;
+            margin: -10px 0;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            background-color: map-get($color, tertiary); 
+            justify-content: center;           
+            transform: translateX(110%);
+            transition: 1400ms;
+            > i {                                   /*border: 1px solid;*/
+                color: map-get($color, clair);
+                margin: 0; 
+                transform: rotate(3turn);    
+                transition: 1600ms;           
+            }
+        }
+    }
+}

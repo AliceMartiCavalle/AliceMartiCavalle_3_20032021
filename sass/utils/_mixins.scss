@@ -9,6 +9,11 @@
     }
 }
 
+@mixin miniOnly {
+    @media screen and (max-width: map-get($breakpoints, mini)) {
+        @content;
+    }
+}
 @mixin mobileOnly {
     @media screen and (max-width: map-get($breakpoints, mobile)) {
         @content;

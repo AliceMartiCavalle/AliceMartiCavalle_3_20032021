@@ -1,39 +1,62 @@
 @font-face {
-    font-family: "Roboto-Thin"; /*si on rajoute une font au cas où, bug*/
-    src: url('../font/Roboto-Thin.ttf');
+    font-family: "Roboto-Thin"; //* si on rajoute une font au cas où, bug
+    src: url("../font/Roboto-Thin.ttf");
 }
 @font-face {
     font-family: "Roboto-Medium";
-    src: url('../font/Roboto-Medium.ttf');
+    src: url("../font/Roboto-Medium.ttf");
 }
 @font-face {
     font-family: "Roboto-Bold";
-    src: url('../font/Roboto-Bold.ttf');
+    src: url("../font/Roboto-Bold.ttf");
 }
 @font-face {
     font-family: "Shrikhand";
-    src: url('../font/Shrikhand-Regular.ttf');
+    src: url("../font/Shrikhand-Regular.ttf");
 }
-body {                      
-                        // border: 1px solid orange;  
-}
-header, section, footer {       /*border: steelblue 1px solid;*/
 
-}
-#none { //*masquer les defs svg en bas de page
+#none {
+    //*masquer les defs svg en bas de page
     display: none;
 }
-.ligne {                        /*border : 1px solid green;*/
+
+.ligne {
+    /*border : 1px solid green;*/
     display: flex;
     align-items: center;
     flex-direction: row;
 }
-.colonne {                      /*border : 1px solid red;*/
+.colonne {
+    /*border : 1px solid red;*/
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-i {                                /*border : 1px solid;*/
+body {
+    // border: 1px solid purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    @include desktopOnly {
+        // border: 1px solid red;
+        display: grid;
+        grid-template-rows: 80px 330px 300px 20px;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 20px;
+        align-items: start;
+        justify-items: center; //? équivalent de space-envenly pour grid ?
+        grid-gap: 20px;
+        max-width: 1500px;
+        margin: auto;
+        // grid-template-areas:
+        // "1 2 3"
+        // "4 4 4"
+        // "5 5 5";
+    }
+}
+i {
+    /*border : 1px solid;*/
     padding: 0 10px;
 }
 h1 {
@@ -57,26 +80,8 @@ p {
 strong {
     font-family: map-get($weight, medium), Arial, sans-serif;
 }
-.sousMenu h2 {                     
-    text-transform: uppercase;
-    /*box-shadow: 0 30px 0 -12px map-get($color, tertiary);*/
-    display: inline-block;
-    position: relative;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    font-size: map-get($size, small);
-    font-weight: normal;
-        &::after {                          /*outline: 5px solid;*/
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 45px;
-            border-bottom: map-get($color, tertiary) solid 3px;
-        }
-    
-}
-a {                                         /*border: 1px solid springgreen;*/
+a {
+    /*border: 1px solid springgreen;*/
     color: black;
     text-decoration: none;
 }
@@ -90,98 +95,9 @@ a {                                         /*border: 1px solid springgreen;*/
     left: 0;
     opacity: 0;
 }
-ul, ol {
+ul,
+ol {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-.icon {    
-                                            // border: 1px solid #000;
-    position: relative;
-    &:nth-child(3), &:nth-child(5), &:nth-child(7), &:nth-child(9) {
-        align-self: flex-end;
-    }
-    > svg {                                 
-                                            // border: 2px solid purple;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        right : 50px;
-        bottom: 40px;
-        fill: map-get($color, sombre);     
-        opacity: 1;
-        @include desktopOnly {
-            right: 30px;
-            bottom: 35px;
-        } 
-        &.--menu {         
-            bottom: -10px;
-            right: 30px;
-        }                       
-        &:nth-child(2) {
-                                            // border: 1px solid green;
-            position: absolute;
-            right : 52px;
-            bottom: 42px;
-            width: 26px;
-            height: 26px;
-            opacity: 0;
-            transition: 500ms;
-            @include desktopOnly {
-                right : 32px;
-                bottom : 37px;
-            }
-            &.--menu { //* pouquoi le hover ne fonctionne pas ? alors que sur la page accueil ça fonctionne ? le gradient doit être défini dans la même page
-                bottom: -8px;
-                right: 32px;
-            }
-            &:active > path { 
-                fill: map-get($color, secondary);
-                cursor : url(../images/cursor.png), grabbing;
-            }
-            &:hover {
-                opacity: 1;
-                cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym749.cur), grab;
-            }
-        }
-    }
-}
-.bouton {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    font-family: map-get($weight, medium);
-    color: map-get($color, clair);
-    background: linear-gradient(-5deg, map-get($color, primary), 60%, map-get($color, secondary));
-    border-radius: 100px;
-    padding: 15px 20px;
-    margin: 10px;
-    @include shadow;
-    transition: 300ms;
-    &:active {
-        box-shadow: 0px 5px 10px 2px darken(map-get($color, primary), 20%);
-    }
-    &::after {                          
-        content: "";
-        // text-align: center;
-        padding: 10px 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        opacity: 0;
-        border-radius: 100px;
-        transition: 1000ms;
-        background: linear-gradient(-8deg, lighten(map-get($color, secondary), 1%), 50%, lighten(map-get($color, primary), 1%));
-    }
-    &:hover {
-        transform: scale(1.01); /*pourquoi flou*/
-        cursor: pointer;
-        &::after {
-            opacity: 1;
-        }
-    }
 }

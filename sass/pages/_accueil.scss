@@ -1,0 +1,170 @@
+.explorer {
+    //  border: 1px solid orange;
+    // grid-area: 2;
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    background-color: map-get($color, background);
+    > .ligne {
+        // border: 1px solid #000;
+        justify-content: center;
+        width: 100%;
+        background-color: darken(map-get($color, background), 10%);
+        box-shadow: inset 0px 10px 10px -10px darken(map-get($color, background), 50%);
+        > p {
+            font-family: map-get($weight, medium);
+        }
+    }
+    > .colonne {
+        padding: 45px;
+        > h1 {
+            /*border : 1px solid;*/
+            text-align: center;
+        }
+        > p {
+            // border : 1px solid blue;
+            text-align: center;
+        }
+    }
+}
+
+.fonctionnement {
+    //    border: 1px solid purple;
+    // grid-area: 3;
+    grid-column: 2;
+    grid-row: 2;
+    padding: 50px 10px;
+    width: 100%;
+    @include desktopOnly {
+        padding: 0;
+    }
+    > h2 {
+        align-self: flex-start;
+        padding-left: 20px;
+        @include desktopOnly {
+            // border: 1px solid #000;
+            margin-left: 20px;
+        }
+    }
+    > ol {
+        // border: 1px solid #000;
+        list-style: none; //!list-style pas assez de paramètres
+        width: 80%; //*pour mettre des marges
+        @include desktopOnly {
+            width: 100%;
+        }
+        > li {
+            /*border: 1px solid orange;*/
+            background-color: map-get($color, background);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px;
+            justify-content: center;
+            @include shadow;
+            position: relative;
+            cursor: pointer;
+            @include desktopOnly {
+                margin: 30px 50px;
+            }
+            &:hover > a span {
+                background-color: map-get($color, secondary);
+            }
+            &:nth-child(3) a i {
+                color: map-get($color, primary);
+            }
+            > a span {
+                border-radius: 50%;
+                background-color: map-get($color, primary);
+                color: map-get($color, clair);
+                padding: 3px 8px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -12px;
+                transition: 700ms;
+            }
+            > a i {
+                color: darken(map-get($color, background), 50%);
+            }
+        }
+    }
+}
+
+.restaurant {
+    // border: 1px solid purple;
+    // grid-area: 4;
+    grid-row: 3;
+    grid-column: 1 / span 2;
+    background: map-get($color, background);
+    padding-top: 40px;
+    width: 100%;
+    @include desktopOnly {
+        display: flex;
+        flex-direction: row;
+        // width: 100%;
+        width: calc(100%- 40px);
+        padding: 50px 0 20px 0;
+        position: relative;
+        margin-top: 50px;
+    }
+    > h2 {
+        // border: 1px solid #000;
+        align-self: flex-start;
+        padding: 10px 0;
+        // margin: 20px;
+        @include desktopOnly {
+            // transform: translate(-10px, 25px) rotate(-40deg);
+            // font-size: map-get($size, big);
+            padding-left: 0;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    }
+    > .box {
+        // border: 1px solid orange;
+        position: relative;
+        border-radius: 20px;
+        margin: 20px 0;
+        background-color: map-get($color, clair);
+        width: 90%;
+        @include shadow;
+        @include desktopOnly {
+            width: 30%;
+            margin: 15px;
+        }
+        > img {
+            object-fit: cover;
+            max-height: 200px;
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            @include desktopOnly {
+                max-height: 130px;
+            }
+        }
+        > span {
+            /*border : 1px solid red;*/
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: map-get($color, tertiary);
+            padding: 5px 10px;
+            border-radius: 2px;
+            color: darken(map-get($color, tertiary), 35%);
+            font-weight: bold;
+        }
+        > .ligne {
+            // border: 1px solid red;
+            // justify-content: space-between;
+            padding: 10px 15px;
+            > .colonne a {
+                align-items: flex-start;
+                > p {
+                    /*border : 1px solid blue;*/
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+}

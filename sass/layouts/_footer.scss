@@ -1,0 +1,80 @@
+footer {
+    // border: 1px solid turquoise;
+    // grid-area: 5;
+    grid-row: 4;
+    grid-column: 1 / span 2;
+    background-color: lighten(map-get($color, sombre), 20%);
+    padding: 20px 0 30px 30px;
+    width: calc(100% - 30px);
+    @include desktopOnly {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: calc(100% - 20px);
+        padding: 10px 0 10px 25px;
+        margin-top: 50px;
+    }
+    &.footerMenu {
+        // border: 1px solid orange;
+        // width: calc(100% - 20px);
+        width: calc(100% - 26px); //? why 
+        position: relative;
+        top: -50px;
+        margin-bottom: -50px;
+        @include desktopOnly {
+            margin-top: -20px;
+        }
+    }
+    > svg {
+        // border : 1px solid paleturquoise;
+        height: 50px;
+        width: 100px;
+    }
+    > ul {
+        /*border: palevioletred 1px solid;*/
+        @include desktopOnly {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+        > li {
+            margin-bottom: 5px;
+            @include desktopOnly {
+                margin: 0 15px;
+            }
+        }
+        > li:nth-child(2) a i {
+            /*border: 1px solid blueviolet;*/
+            font-size: 0.9em;
+        }
+        > li:nth-child(3) a,
+        li:nth-child(4) a {
+            font-family: map-get($weight, thin), Arial, sans-serif;
+        }
+        > li a {
+            color: map-get($color, clair);
+            transition: 300ms;
+            @include desktopOnly {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            &:hover {
+                color: map-get($color, primary);
+                font-style: italic;
+            }
+            &:active {
+                color: map-get($color, secondary);
+                font-style: italic;
+            }
+        }
+        > li a i {
+            /*border: yellow 1px solid;*/
+            padding: 0;
+            width: 15px;
+            margin-right: 10px;
+        }
+    }
+}
