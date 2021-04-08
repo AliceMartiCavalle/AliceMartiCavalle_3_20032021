@@ -1,11 +1,11 @@
 @mixin shadow {
-    box-shadow: 0px 5px 10px 2px darken(map-get($color, background), 40%);
+    box-shadow: 0px 3px 10px 2px darken(map-get($color, background), 15%);
     transition: 500ms;
     &:hover {
-        box-shadow: 0px 5px 10px 2px darken(map-get($color, background), 60%);
+        box-shadow: 0px 3px 10px 2px darken(map-get($color, background), 30%);
     }
     &:active { /*comment virer la transition ? pas le temps de voir sinon*/
-        box-shadow: 0px 5px 10px 2px map-get($color, secondary);
+        box-shadow: 0px 3px 10px 2px map-get($color, secondary);
     }
 }
 

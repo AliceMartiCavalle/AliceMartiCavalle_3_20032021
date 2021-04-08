@@ -81,7 +81,7 @@
         }
     }
     > ul li {                   
-                                            // border: 1px solid green;
+                                //  border: 1px solid green;
         width: 95%; //?why
         background-color: map-get($color, clair);
         border-radius: 15px;
@@ -144,7 +144,7 @@
             // transform-origin: left;
             transition: 0s 1000ms;
             > p {
-                margin: 0; //* and why not use reset css ? Because I fucking forgot, ok ? No I'm not talking to myself at all
+                margin: 8px 0 0 0;
             }
             
         }
@@ -152,7 +152,8 @@
                                                     // border: 1px solid;
             /*transform: translateX(150%);*/  
             /*position: absolute;            
-            right: 0px;  */                 
+            right: 0px;  */    
+            cursor : pointer;             
             transition: 700ms 150ms;  
             transition-timing-function: cubic-bezier(.53,0,.61,1.05);  
             width: 20%;
@@ -176,7 +177,7 @@
             }
             > p {                   
                                         // border: 1px solid blue;
-                padding: 20px 0px 0 10px;
+                padding: 30px 0 0 25px;
                 margin: 0/*0 20px 0 16px*/;
                 background-color: map-get($color, clair);  
                 position: relative;            
@@ -191,7 +192,7 @@
             position: absolute; 
             right: 0;                
             width: 30%;
-            height: 62px;
+            height: 70px;
             margin: -10px 0;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;

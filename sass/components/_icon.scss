@@ -14,7 +14,9 @@
         position: absolute;
         right: 50px;
         bottom: 40px;
-        fill: map-get($color, sombre);
+        fill: darken(map-get($color, background), 50%);
+        // stroke: red;
+        // stroke-width: 20px;
         opacity: 1;
         @include desktopOnly {
             right: 30px;
