@@ -70,7 +70,7 @@
         padding-bottom: 5px;
         margin-bottom: 15px;
         font-size: map-get($size, small);
-        font-family: map-get($weight, thin), Arial, sans-serif;
+        font-family: map-get($font, thin), Arial, sans-serif;
         &::after {                          /*outline: 5px solid;*/
             content: "";
             position: absolute;

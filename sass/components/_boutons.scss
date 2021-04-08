@@ -3,7 +3,7 @@
     justify-content: center;
     position: relative;
     z-index: 1;
-    font-family: map-get($weight, medium);
+    font-family: map-get($font, medium);
     @include miniOnly {
         font-size: .9em;
     }

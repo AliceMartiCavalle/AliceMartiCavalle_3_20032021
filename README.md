@@ -4,7 +4,7 @@ Note post mentorat 30/03
 - On ne peut pas mettre les defs du svg en display none sinon le dégradé ne s'applique plus
 - 5 erreurs liées aux svg quand on passe le code au validateur CSS
 - Quand je hover sur les li du footer ça fait sauter les li d'à côté au passage en ital
-- Que faire quand le texte des menus passent sur plusieurs lignes sur petits écrans ?
+- Que faire quand le texte des menus passent sur plusieurs lignes sur petits écrans ? rien
 
 Polices
 Logo et titres: Shrikhand

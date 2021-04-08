@@ -12,7 +12,7 @@
         background-color: darken(map-get($color, background), 10%);
         box-shadow: inset 0px 10px 10px -10px darken(map-get($color, background), 50%);
         > p {
-            font-family: map-get($weight, medium);
+            font-family: map-get($font, medium);
         }
     }
     > .colonne {
@@ -108,7 +108,7 @@
         display: flex;
         flex-direction: row;
         // width: 100%;
-        width: calc(100%- 40px);
+        width: calc(100% - 40px);
         padding: 50px 0 20px 0;
         position: relative;
         margin-top: 50px;

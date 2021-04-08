@@ -25,7 +25,7 @@
             height: 25px;
             right : 35px;
         }
-        &.--menu {
+        &.heartMenu {
             bottom: -10px;
             right: 30px;
             @include miniOnly {
@@ -51,11 +51,12 @@
                 height: 22.5px;
                 right : 36.5px;
             }
-            &.--menu {
+            &.heartMenu {
                 //* pouquoi le hover ne fonctionne pas ? alors que sur la page accueil ça fonctionne ?
                 //*le gradient doit être défini dans la même page
                 bottom: -8px;
                 right: 32px;
+                // border: 1px solid #000;
                 @include miniOnly {
                     right: 6.1px;
                     width : 22px;

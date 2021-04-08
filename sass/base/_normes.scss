@@ -38,6 +38,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
+    font-family: sans-serif; 
     @include desktopOnly {
         // border: 1px solid red;
         display: grid;
@@ -66,23 +67,23 @@ i {
 h1 {
     margin: 0;
     font-size: map-get($size, medium);
-    font-family: map-get($weight, bold), Arial, sans-serif;
+    font-family: map-get($font, bold), Arial, sans-serif;
 }
 h2 {
     margin: 0;
     font-size: map-get($size, medium);
-    font-family: map-get($weight, bold), Arial, sans-serif;
+    font-family: map-get($font, bold), Arial, sans-serif;
 }
 h3 {
     margin: 0;
     font-size: map-get($size, small);
-    font-family: map-get($weight, bold), Arial, sans-serif;
+    font-family: map-get($font, bold), Arial, sans-serif;
 }
 p {
-    font-family: map-get($weight, thin), Arial, sans-serif;
+    font-family: map-get($font, thin), Arial, sans-serif;
 }
 strong {
-    font-family: map-get($weight, medium), Arial, sans-serif;
+    font-family: map-get($font, medium), Arial, sans-serif;
 }
 a {
     /*border: 1px solid springgreen;*/
