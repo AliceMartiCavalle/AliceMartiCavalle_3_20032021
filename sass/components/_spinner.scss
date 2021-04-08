@@ -1,12 +1,12 @@
 /*loader*/
-body {                                  
-                                        //   border: 1px solid blue;
+body {
+    //   border: 1px solid blue;
     /*class colonne*/
     align-items: center;
     justify-content: flex-start; /*disparaît quand center ??*/
 }
-.background {                              
-                                             border : 1px solid red;
+.background {
+    // border: 1px solid red;
     background-color: transparentize(map-get($color, clair), 0.2);
     height: 5000px;
     width: 5000px;
@@ -14,19 +14,20 @@ body {
     position: fixed;
     z-index: 9999;
     animation: fadeout 0.5s 2.5s forwards;
-    &__loader {                                 /*border: 1px solid green;*/
-    position: fixed;
-    top: calc(50% - 75px);
-    left: calc(50% - 75px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    perspective: 800px;
-        > i {       
-                                    // border: 1px solid #000;
+    &__loader {
+        /*border: 1px solid green;*/
+        position: fixed;
+        top: calc(50% - 75px);
+        left: calc(50% - 75px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        perspective: 800px;
+        > i {
+            // border: 1px solid #000;
             color: lighten(map-get($color, sombre), 10%);
             font-size: 2em;
             animation: fadeinout 2s 0.5s both;
@@ -34,36 +35,36 @@ body {
     }
 }
 
-  .inner {
+.inner {
     position: absolute;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    border-radius: 50%;  
-  }
-  
-  .inner.one {
+    border-radius: 50%;
+}
+
+.inner.one {
     left: 0%;
     top: 0%;
-    animation: rotate-one  2s linear 10; /*10 pour pas que ça tourne pour rien en arrière-plan*/
+    animation: rotate-one 2s linear 10; /*10 pour pas que ça tourne pour rien en arrière-plan*/
     border-bottom: 10px solid map-get($color, primary);
-  }
-  
-  .inner.two {
+}
+
+.inner.two {
     right: 0%;
     top: 0%;
     animation: rotate-two 2s linear 10;
     border-right: 10px solid map-get($color, secondary);
-  }
-  
-  .inner.three {
+}
+
+.inner.three {
     right: 0%;
     bottom: 0%;
     animation: rotate-three 2s linear 10;
     border-top: 10px solid map-get($color, tertiary);
-  }
+}
 
-  @keyframes fadeout {
+@keyframes fadeout {
     0% {
         opacity: 1;
     }
@@ -74,41 +75,41 @@ body {
     }
 }
 
-    @keyframes fadeinout {
-        0% {
-            opacity: 0;
-        }
-        70% {
-            opacity: 100%;
-        }
-        100% {
-            opacity: 0;
-        }
+@keyframes fadeinout {
+    0% {
+        opacity: 0;
     }
+    70% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
-  @keyframes rotate-one {
+@keyframes rotate-one {
     0% {
-      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
     }
     100% {
-      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
     }
-  }
-  
-  @keyframes rotate-two {
+}
+
+@keyframes rotate-two {
     0% {
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
     }
     100% {
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
     }
-  }
-  
-  @keyframes rotate-three {
+}
+
+@keyframes rotate-three {
     0% {
-      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
     }
     100% {
-      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
     }
-  }
+}

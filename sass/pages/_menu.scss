@@ -95,10 +95,10 @@
         &:nth-child(2) {
             animation: fadein 1.5s 0.3s both;
         }
-        &:nth-child(3) { /*a vérifier*/
+        &:nth-child(3) {
             animation: fadein 1.5s 0.6s both;
         }
-        &:nth-child(4) { /*a vérifier*/
+        &:nth-child(4) {
             animation: fadein 1.5s 0.9s both;
         }
         &:hover > .ligne {  /*p*/
@@ -114,34 +114,29 @@
             transform: rotate(0);
         }
         &:hover > .colonne {
-            // width: 48%;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
             animation: shrink 1200ms forwards;
             & h3 {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 100%;
-            // border: 1px solid salmon;
-        }
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width: 100%;
+            }
             & p {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 100%;
-            // border: 1px solid salmon;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 100%;
             }
         }
         > .colonne {            
-                                    // border: 1px solid orange;
             align-items: flex-start;
             position: relative; /*pour placer animation par rapport à ici*/
             z-index: -1; //* I forgot why -__-" loader anim ?
             width: 80%;  
             // transform: scaleX(2);  //* déforme le texte donc non
-            // transform-origin: left;
             transition: 0s 1000ms;
             > p {
                 margin: 8px 0 0 0;
@@ -149,7 +144,7 @@
             
         }
         > .ligne {                          
-                                                    // border: 1px solid;
+                        // border: 1px solid orange;
             /*transform: translateX(150%);*/  
             /*position: absolute;            
             right: 0px;  */    
@@ -158,37 +153,34 @@
             transition-timing-function: cubic-bezier(.53,0,.61,1.05);  
             width: 20%;
             position: relative; //*pour que les "..." se cale par rapport à ça
-            > .colonne {            
-                                    // border: 1px solid pink;
-                display: none;
-                background-color: map-get($color, clair);
-                opacity: 1;        /*à régler pour tous les li*/  
-                position: absolute;            
-                right: 70%; 
-                padding-right: 30%;
-                width: 20%; 
-                transition: 150ms 650ms;  
-                @media screen and (min-width: 550px) and (max-width : 991px) { //!impossible à systhématiser
-                    // display: none;
-                    border: rgb(9, 211, 9) 1px solid;
-                    //? Est-ce que c'est possible de faire une fonction avec la taille du texte ?
-                    //? if txt.lenght > x px opacity 1 else 0 ?
-                }
-            }
+            // > .colonne {            
+            //                         border: 1px solid blue;
+            //     // display: none;
+            //     background-color: map-get($color, clair);
+            //     opacity: 1;        /*à régler pour tous les li*/  
+            //     position: absolute;            
+            //     right: 70%; 
+            //     padding-right: 30%;
+            //     width: 20%; 
+            //     transition: 150ms 650ms;  
+            //     @media screen and (min-width: 550px) and (max-width : 991px) { //!impossible à systhématiser
+            //         // display: none;
+            //         border: rgb(9, 211, 9) 1px solid;
+            //         //? Est-ce que c'est possible de faire une fonction avec la taille du texte ?
+            //         //? if txt.lenght > x px opacity 1 else 0 ?
+            //     }
+            // }
             > p {                   
-                                        // border: 1px solid blue;
                 padding: 30px 0 0 25px;
                 margin: 0/*0 20px 0 16px*/;
                 background-color: map-get($color, clair);  
-                position: relative;            
-                right: 0px;
+                // position: relative;            
+                // right: 0px;
                 width: 100%;
                 text-align: left;
-                // transform: translateX(0%);              
             }
         }
-        > .ligne:nth-child(3) {     
-                                                // border: 1px solid #000;   
+        > .ligne:nth-child(3) {                          
             position: absolute; 
             right: 0;                
             width: 30%;
@@ -200,7 +192,7 @@
             justify-content: center;           
             transform: translateX(110%);
             transition: 1400ms;
-            > i {                                   /*border: 1px solid;*/
+            > i {                                   
                 color: map-get($color, clair);
                 margin: 0; 
                 transform: rotate(3turn);    
