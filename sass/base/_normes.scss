@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Roboto-Thin"; //* si on rajoute une font au cas où, bug
+    font-family: "Roboto-Thin"; // si on rajoute une font au cas où, bug
     src: url("../font/Roboto-Thin.ttf");
 }
 @font-face {
@@ -15,45 +15,32 @@
     src: url("../font/Shrikhand-Regular.ttf");
 }
 
-#none {
-    //*masquer les defs svg en bas de page
-    display: none;
-}
-
 .ligne {
-    /*border : 1px solid green;*/
     display: flex;
     align-items: center;
     flex-direction: row;
 }
 .colonne {
-    /*border : 1px solid red;*/
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 body {
-    // border: 1px solid purple;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
-    font-family: sans-serif; 
+    font-family: sans-serif;
     @include desktopOnly {
-        // border: 1px solid red;
         display: grid;
         grid-template-rows: 80px 330px 300px 20px;
         grid-template-columns: 1fr 1fr;
         padding: 0 20px;
         align-items: start;
-        justify-items: center; //? équivalent de space-envenly pour grid ?
+        justify-items: center;
         grid-gap: 20px;
         max-width: 1500px;
         margin: auto;
-        // grid-template-areas:
-        // "1 2 3"
-        // "4 4 4"
-        // "5 5 5";
     }
     @include mobileOnly {
         padding: 0;
@@ -61,7 +48,6 @@ body {
     }
 }
 i {
-    /*border : 1px solid;*/
     padding: 0 10px;
 }
 h1 {
@@ -86,7 +72,6 @@ strong {
     font-family: map-get($font, medium), Arial, sans-serif;
 }
 a {
-    /*border: 1px solid springgreen;*/
     color: black;
     text-decoration: none;
 }
@@ -100,8 +85,7 @@ a {
     left: 0;
     opacity: 0;
 }
-ul,
-ol {
+ul, ol {
     list-style: none;
     padding: 0;
     margin: 0;

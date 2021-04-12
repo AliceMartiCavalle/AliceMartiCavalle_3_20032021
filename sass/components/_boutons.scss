@@ -19,7 +19,6 @@
     }
     &::after {                          
         content: "";
-        // text-align: center;
         padding: 10px 0;
         position: absolute;
         top: 0;
@@ -33,7 +32,7 @@
         background: linear-gradient(-8deg, lighten(map-get($color, secondary), 1%), 50%, lighten(map-get($color, primary), 1%));
     }
     &:hover {
-        transform: scale(1.01); /*pourquoi flou*/
+        transform: scale(1.01);
         cursor: pointer;
         &::after {
             opacity: 1;

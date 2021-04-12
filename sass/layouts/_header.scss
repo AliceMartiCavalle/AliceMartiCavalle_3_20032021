@@ -1,7 +1,5 @@
 header {
-    // border: 1px solid goldenrod;
     padding: 20px 0;
-    // grid-area: 1;
     grid-column: 1 / span 2;
     grid-row: 1;
     @include desktopOnly {
@@ -10,25 +8,27 @@ header {
     > .ligne {
         /*pour menu*/
         justify-content: center;
-        /*padding: 0 54px;*/
         width: 350px;
         position: relative;
-        &:hover > a p { //* flèche
-            transform: scale(1.2) rotate(180deg) translateX(20px);
+        &:hover > a p { // flèche
+            transform: scale(1.2) rotate(180deg) translateX(60px);
+            @include mobileOnly {
+                transform: scale(1.2) rotate(180deg) translateX(15px);
+            }
             @include miniOnly {
-                transform: scale(1.2) rotate(180deg) translateX(-20px);
+                transform: scale(1.2) rotate(180deg) translateX(-10px);
             }
         }
-        &:hover > a svg:nth-child(3) { //*logo couleur
+        &:hover > a svg:nth-child(3) { // logo couleur
             opacity: 1;
         }
-        &:active > a svg:nth-child(3) { //*logo couleur
+        &:active > a svg:nth-child(3) { // logo couleur
             transform: scale(1.3);
             @include miniOnly {
                 transform: scale(1.1);
             }
         }
-        &:active > a svg:nth-child(2) { //*logo noir
+        &:active > a svg:nth-child(2) { // logo noir
             transform: scale(1.3);
             @include miniOnly {
                 transform: scale(1.1);
@@ -47,7 +47,7 @@ header {
             &:nth-child(3) {
                 position: absolute;
                 top: 0;
-                left: 9%; //*8.5 pour que ça soit pile dessus ou avec un décalage pour avoir un effet ombre
+                left: 9%; // 8.5 pour que ça soit pile dessus ou avec un décalage pour avoir un effet ombre
                 height: 91%;
                 width: 91%;
                 opacity: 0;
@@ -59,17 +59,20 @@ header {
             }
         }
         > a p {
-            transform: rotate(180deg);
+            transform: rotate(180deg) translateX(50px);
             font-size: map-get($size, big);
-            position: absolute; //?why se positionne pas par rapport à .ligne ?
+            position: absolute;
             top: 0px;
             left: 10px;
             transition: 400ms;
             margin: 0;
+            @include mobileOnly {
+                font-size: map-get($size, medium);
+                transform: rotate(180deg) translateX(0px);
+            }
             @include miniOnly {
                 font-size: map-get($size, medium);
-                transform: rotate(180deg) translateX(-40px);
-
+                transform: rotate(180deg) translateX(-25px);
             }
         }
     }

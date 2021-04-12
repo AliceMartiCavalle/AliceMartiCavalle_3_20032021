@@ -1,6 +1,4 @@
 footer {
-    // border: 1px solid turquoise;
-    // grid-area: 5;
     grid-row: 4;
     grid-column: 1 / span 2;
     background-color: lighten(map-get($color, sombre), 20%);
@@ -10,14 +8,12 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: calc(100% - 20px);
+        width: calc(100% - 24px);
         padding: 10px 0 10px 25px;
-        margin-top: 50px;
+        margin-top: 90px;
     }
     &.footerMenu {
-        // border: 1px solid orange;
-        // width: calc(100% - 20px);
-        width: calc(100% - 26px); //? why 
+        width: calc(100% - 26px);
         position: relative;
         top: -50px;
         margin-bottom: -50px;
@@ -26,12 +22,10 @@ footer {
         }
     }
     > svg {
-        // border : 1px solid paleturquoise;
         height: 50px;
         width: 100px;
     }
     > ul {
-        /*border: palevioletred 1px solid;*/
         @include desktopOnly {
             display: flex;
             flex-direction: row;
@@ -47,7 +41,6 @@ footer {
             }
         }
         > li:nth-child(2) a i {
-            /*border: 1px solid blueviolet;*/
             font-size: 0.9em;
         }
         > li:nth-child(3) a,
@@ -74,7 +67,6 @@ footer {
             }
         }
         > li a i {
-            /*border: yellow 1px solid;*/
             padding: 0;
             width: 15px;
             margin-right: 10px;

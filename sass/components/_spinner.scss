@@ -1,12 +1,9 @@
 /*loader*/
 body {
-    //   border: 1px solid blue;
-    /*class colonne*/
     align-items: center;
-    justify-content: flex-start; /*disparaît quand center ??*/
+    justify-content: flex-start;
 }
 .background {
-    // border: 1px solid red;
     background-color: transparentize(map-get($color, clair), 0.2);
     height: 5000px;
     width: 5000px;
@@ -15,7 +12,6 @@ body {
     z-index: 9999;
     animation: fadeout 0.5s 2.5s forwards;
     &__loader {
-        /*border: 1px solid green;*/
         position: fixed;
         top: calc(50% - 75px);
         left: calc(50% - 75px);
@@ -27,7 +23,6 @@ body {
         border-radius: 50%;
         perspective: 800px;
         > i {
-            // border: 1px solid #000;
             color: lighten(map-get($color, sombre), 10%);
             font-size: 2em;
             animation: fadeinout 2s 0.5s both;

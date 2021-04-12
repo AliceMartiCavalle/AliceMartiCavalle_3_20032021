@@ -1,16 +1,19 @@
 .explorer {
-    //  border: 1px solid orange;
-    // grid-area: 2;
     grid-column: 1;
     grid-row: 2;
     width: 100%;
     background-color: map-get($color, background);
     > .ligne {
-        // border: 1px solid #000;
         justify-content: center;
         width: 100%;
         background-color: darken(map-get($color, background), 10%);
         box-shadow: inset 0px 10px 10px -10px darken(map-get($color, background), 50%);
+        > i {
+            // border: 1px solid #000;
+            position: relative;
+            top: -2px;
+            margin-right: 4px;
+        }
         > p {
             font-family: map-get($font, medium);
         }
@@ -21,19 +24,15 @@
             padding: 45px 25px;
         }
         > h1 {
-            /*border : 1px solid;*/
             text-align: center;
         }
         > p {
-            // border : 1px solid blue;
             text-align: center;
         }
     }
 }
 
 .fonctionnement {
-    //    border: 1px solid purple;
-    // grid-area: 3;
     grid-column: 2;
     grid-row: 2;
     padding: 50px 10px;
@@ -45,14 +44,12 @@
         align-self: flex-start;
         padding-left: 20px;
         @include desktopOnly {
-            // border: 1px solid #000;
             margin-left: 20px;
         }
     }
     > ol {
-        // border: 1px solid #000;
-        list-style: none; //!list-style pas assez de paramètres
-        width: 80%; //*pour mettre des marges
+        list-style: none; //list-style pas assez de paramètres
+        width: 80%;
         @include desktopOnly {
             width: 100%;
         }
@@ -60,7 +57,6 @@
             width: 95%;
         }
         > li {
-                    // border: 1px solid orange;
             background-color: lighten(map-get($color, background), 2%);
             border-radius: 20px;
             padding: 20px;
@@ -97,30 +93,23 @@
 }
 
 .restaurant {
-    // border: 1px solid purple;
-    // grid-area: 4;
     grid-row: 3;
     grid-column: 1 / span 2;
     background: map-get($color, background);
-    padding-top: 40px;
+    padding : 40px 0 50px 0;
     width: 100%;
     @include desktopOnly {
         display: flex;
         flex-direction: row;
-        // width: 100%;
-        width: calc(100% - 40px);
+        width: 100%;
         padding: 50px 0 20px 0;
         position: relative;
         margin-top: 50px;
     }
     > h2 {
-        // border: 1px solid rgb(83, 54, 54);
         align-self: flex-start;
         padding: 0 0 0 20px;
-        // margin: 20px;
         @include desktopOnly {
-            // transform: translate(-10px, 25px) rotate(-40deg);
-            // font-size: map-get($size, big);
             padding-left: 0;
             position: absolute;
             top: 15px;
@@ -128,7 +117,6 @@
         }
     }
     > .box {
-        // border: 1px solid orange;
         position: relative;
         border-radius: 20px;
         margin: 20px 0;
@@ -150,7 +138,6 @@
             }
         }
         > span {
-                    // border : 1px solid red;
             position: absolute;
             top: 10px;
             right: 10px;
@@ -161,13 +148,10 @@
             font-weight: bold;
         }
         > .ligne {
-            // border: 1px solid red;
-            // justify-content: space-between;
             padding: 10px 15px;
             > .colonne a {
                 align-items: flex-start;
                 > p {
-                    /*border : 1px solid blue;*/
                     margin: 5px 0;
                 }
             }
