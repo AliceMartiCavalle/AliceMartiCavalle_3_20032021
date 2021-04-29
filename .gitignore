@@ -2,7 +2,7 @@
 /.vscode
 /Maquettes Ohmyfood
 Brief créatif - Ohmyfood!.pdf
-/assets/css
+# /assets/css
 /node_modules
 /outils soutenance/cursor.avi
 /outils soutenance/degrade.avi
